@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><span class="icon">🌙</span> Sleep Analysis Dashboard</h1>
+    </header>
+
+    <!-- Quick Stats -->
+    <div class="stats">
+      <div class="card" id="avgSleep">
+        <h2>Average Sleep Duration</h2>
+        <p id="avgSleepValue">Loading...</p>
+        <span class="icon">⏰</span>
+      </div>
+      <div class="card" id="avgEfficiency">
+        <h2>Sleep Efficiency</h2>
+        <p id="avgEfficiencyValue">Loading...</p>
+        <span class="icon">🔋</span>
+      </div>
+      <div class="card" id="avgDeepSleep">
+        <h2>Daily Steps Average</h2>
+        <p id="avgDailySteps">Loading...</p>
+        <span class="icon">🚶</span>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('trends')">Sleep Trends</button>
+      <button class="tab-button" onclick="showTab('stages')">Activity Trends</button>
+      <button class="tab-button" onclick="showTab('environment')">Health Trends</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="trends" class="tab-content">
+      <h2>Sleep Duration Trends</h2>
+      <canvas id="sleepTrendsChart"></canvas>
+    </div>
+    <div id="stages" class="tab-content">
+      <h2>Activity Trends</h2>
+      <canvas id="activityStressChart"></canvas>
+    </div>
+    <div id="environment" class="tab-content">
+      <h2>Heart/BP Trends</h2>
+      <canvas id="heartRateBPChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
